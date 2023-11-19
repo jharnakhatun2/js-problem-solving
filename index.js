@@ -37,4 +37,19 @@ function totalVowelNumber(sentence) {
     })
     return count;
 }
-console.log(totalVowelNumber("Bangladesh is a Golden Country among world"))
+console.log(totalVowelNumber("Bangladesh is a Golden Country among world"));
+
+
+// 6.How would you extract the duplicate numbers in an array?
+const number = [1,4,5,5,6,7,6,8,9,100,4]
+const duplicate = number.filter(function(value, index, array) {
+  return array.indexOf(value) !== index;
+});
+console.log(duplicate);
+
+// 7.How would you extract the unique numbers in an array?
+const numbers = [1,4,5,5,6,7,6,8,9,100,4]
+const unique = numbers.filter(function(value, index, array) {
+  return array.indexOf(value) === index;
+});
+console.log(unique);
