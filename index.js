@@ -53,3 +53,4 @@ const unique = numbers.filter(function(value, index, array) {
   return array.indexOf(value) === index;
 });
 console.log(unique);
+
