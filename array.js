@@ -94,3 +94,20 @@ const myColor = ["Red", "Green", "White", "Black"];
 console.log(myColor.toString());
 console.log(myColor.join());
 console.log(myColor.join('+'));
+
+// 6. Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number. For example if you accept 025468 the output should be 0-254-6-8.
+
+function insertDash() {
+    const inputNumbers = window.prompt("Input your numbers :");
+    const num = inputNumbers.toString();
+    let result = "";
+    for(let i = 0; i < num.length; i++) {
+        const digit = parseInt(num[i]);
+        if(digit % 2 === 0){
+            result += (i>0 ? "-" : "") + digit;
+        }else{
+            result += digit;
+        }
+    }
+    alert(result);
+}
