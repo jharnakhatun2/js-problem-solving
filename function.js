@@ -6,8 +6,24 @@ return result;
 }
 const multiply = multiplyNumbers(2,5,6,7)
 console.log(multiply);
+
+
 // Task-2
 // Take a number if the number is odd multiply it by 2 and return the result. If the number is even divide it by two and return the result.
+
+function calculateNum(num){
+    let result = 0 ;
+    if(num % 2 !== 0){
+        result = num * 2;
+        return result;
+    }
+    if(num % 2 === 0){
+        result = num / 2;
+        return result
+    }
+}
+const number = calculateNum(16);
+console.log(number);
 
 // Task-3
 // Write a function called make_avg() which will take an array of integers and the size of that array and return the average of those values.
