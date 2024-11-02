@@ -19,3 +19,18 @@ return Math.round(kilo) + ' kilometer';
 }
 const res = kilometerToMile(20);
 console.log(res);
+
+
+// Check whether a year is a Leap Year or not
+function isLeapYear(year){
+    if(year % 4 === 0){
+        if(year % 100 === 0){
+            return (year % 400 === 0) ? `${year} is Leap Year` : `${year} is not Leap Year`;
+        }
+        return `${year} is Leap Year`;
+    }
+    return `${year} is not Leap Year`;
+}
+const isLeap = isLeapYear(1987);
+
+console.log(isLeap);
