@@ -32,5 +32,4 @@ function isLeapYear(year){
     return `${year} is not Leap Year`;
 }
 const isLeap = isLeapYear(1987);
-
 console.log(isLeap);
