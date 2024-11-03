@@ -2,6 +2,21 @@
 Find the lowest number in the array below.
 const heights2 = [167, 190, 120, 165, 137];*/
 
+const heights2 = [167, 190, 120, 165, 137];
+function countLowestNumber(array){
+    if(Array.isArray(array)=== false){
+        return 'Enter an array as input'
+    }
+let count = array[0];
+for(let item of array){
+if(item < count){
+    count = item ;
+}
+}
+return count;
+}
+const lowestNumber = countLowestNumber(23);
+console.log(lowestNumber);
 /*Task -2:
 Find the friend with the smallest name.
 const heights2 = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];*/
