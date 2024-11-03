@@ -7,23 +7,27 @@ function celsiusToFahrenheit(celsius) {
 }
 const result = celsiusToFahrenheit(25);
 console.log(result);
+
+
 // Task-2:
 // You are given an array of numbers. Count how many times the a number is repeated in the array.
-
 // sample-input: numbers = [5,6,11,12,98, 5]
-
 // find: 5
-
 // output: 2
 
-
 // sample-input:
-
 // numbers = [5,6,11,12,98, 5]
-
 // find: 25
-
 // output: 0
+const numbers = [5,6,11,12,98, 5];
+
+function findNumber(array, element) {
+    return array.reduce((count, item) => item === element ? count + 1 : count, 0);
+}
+
+const findResult = findNumber(numbers, 25);
+console.log(findResult); ;
+
 
 // Task-3:
 // Write a function to count the number of vowels in a string.
