@@ -45,12 +45,23 @@ function countVowels(str) {
 }
 const resultForCountVowels = countVowels(" your code is working fine");
 console.log(resultForCountVowels);
+
+
 // Task-4:
 // Write a function to find the longest word in a given string.
 
 // sample-input: I am learning Programming to become a programmer
 
 // sample-output: Programming
+function longestWord(string) {
+    return string.split(' ').reduce((longest, word) => {
+        return word.length > longest.length ? word : longest;
+    }, '');
+}
+
+const findWord = longestWord("I am learning Programming to become a programmer");
+console.log(findWord);
+
 
 // Task-5:
 // Generate a random number between 10 to 20.
