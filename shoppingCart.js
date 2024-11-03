@@ -6,14 +6,14 @@ const products = [
     {name: 'Shirt', price: 700},
     {name: 'Pant', price: 1200}
 ]
-function calculateShoppingCart(products){
+function calculateProductPrice(products){
     let totalPrice = 0;
 for(const product of products){
     totalPrice += product.price;
 }
 return totalPrice;
 }
-const cartPrice = calculateShoppingCart(products);
+const cartPrice = calculateProductPrice(products);
 console.log("Total product price : " , cartPrice);
 
 
