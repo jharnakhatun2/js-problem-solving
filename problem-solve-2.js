@@ -17,9 +17,27 @@ return count;
 }
 const lowestNumber = countLowestNumber(23);
 console.log(lowestNumber);
+
+
 /*Task -2:
 Find the friend with the smallest name.
-const heights2 = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];*/
+const friends = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];*/
+const friends = ['rahim', 'robin', 'rafi', 'ron', 'de' ,'rashed'];
+function smallestName(array){
+    if(Array.isArray(array)=== false){
+        return " enter array of string"
+    }
+let count = array[0];
+for(const name of array){
+    if(name.length < count.length){
+        count = name
+    }
+}
+return count;
+}
+// const smallNameFriend = smallestName('jharna');
+const smallNameFriend = smallestName(friends);
+console.log(smallNameFriend);
 
 /*Task-3:
 Your task is to calculate the total budget required to buy electronics:
