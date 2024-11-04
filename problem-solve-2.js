@@ -18,6 +18,9 @@ function countLowestNumber(array) {
 const lowestNumber = countLowestNumber(23);
 console.log(lowestNumber);
 
+
+
+
 /*Task -2:
 Find the friend with the smallest name.
 const friends = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];*/
@@ -37,6 +40,10 @@ function smallestName(array) {
 // const smallNameFriend = smallestName('jharna');
 const smallNameFriend = smallestName(friends);
 console.log(smallNameFriend);
+
+
+
+
 
 /*Task-3:
 Your task is to calculate the total budget required to buy electronics:
@@ -68,6 +75,9 @@ function calculateElectronicsBudget(
 }
 const result = calculateElectronicsBudget(2, 4, "amar");
 console.log(result);
+
+
+
 
 /*Task-4:
 You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone.
@@ -105,6 +115,9 @@ function findAveragePhonePrice(array) {
 const averagePhonePrice = findAveragePhonePrice(phones);
 // const averagePhonePrice = findAveragePhonePrice("phones");
 console.log(averagePhonePrice);
+
+
+
 
 /*Task -5: (Hard)
 For each employee their current salary is calculated by multiplying yearly increment with experience then adding the result to the starting salary. Now calculate is the total salary has to be provided by the company in a month.
