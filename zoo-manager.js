@@ -59,3 +59,27 @@ function deleteInvalids(numbers){
 }
 const virus = deleteInvalids(["1" , {num:2} , NaN ] );
 console.log(virus);
+
+
+
+// Problem 04 : Make A Great Password
+function password(object){
+   if(!object.siteName || !object.birthYear || !object.siteName){
+    return 'Error: Missing required properties!!!'
+   }
+   if(typeof object.birthYear !== 'number' || object.birthYear.toString().length !== 4){
+    return "Error : birthYear must be a four-digit number"
+   }
+   const siteName = object.siteName.charAt(0).toUpperCase()+ object.siteName.slice(1)
+   const password = siteName + '#' + object.name + '@' + object.birthYear
+   return password;
+
+}
+const pass = password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google" });
+//const pass = password({ name: "toky", birthYear: 200, siteName: "Facebook" } );
+console.log(pass);
+
+
+
+
+
