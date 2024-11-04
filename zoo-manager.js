@@ -16,24 +16,46 @@ console.log(calMoney);
 
 // Problem-02: Good Name , Bad Name
 function checkName(name) {
- 
-  if (name[name.length - 1] === "a") {
+    if(typeof name !== 'string'){
+        return 'invalid ';
+    }
+const lastChar = name[name.length - 1].toLowerCase();
+  if (lastChar === "a") {
     console.log("Good Name");
-  } else if (name[name.length - 1] === "y") {
+  } else if (lastChar === "y") {
     console.log("Good Name");
-  } else if (name[name.length - 1] === "i") {
+  } else if (lastChar === "i") {
     console.log("Good Name");
-  } else if (name[name.length - 1] === "e") {
+  } else if (lastChar === "e") {
     console.log("Good Name");
-  } else if (name[name.length - 1] === "o") {
+  } else if (lastChar === "o") {
     console.log("Good Name");
-  } else if (name[name.length - 1] === "u") {
+  } else if (lastChar === "u") {
     console.log("Good Name");
-  } else if (name[name.length - 1] === "w") {
+  } else if (lastChar === "w") {
     console.log("Good Name");
   } else {
     console.log("Bad Name");
   }
 }
-const result = checkName("nurul");
+const result = checkName('Salman');
 console.log(result);
+
+
+
+// Problem 03 : Virus in my Array
+const input =[1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }] ;
+function deleteInvalids(numbers){
+    if(!Array.isArray(numbers)){
+        return 'Please provide a valid array';
+    }
+    let arr = [];
+    for(const number of numbers){
+        if(typeof number === 'number' && Number.isNaN(number) === false){
+            arr.push(number);
+        }
+    }
+    return arr;
+}
+const virus = deleteInvalids(["1" , {num:2} , NaN ] );
+console.log(virus);
