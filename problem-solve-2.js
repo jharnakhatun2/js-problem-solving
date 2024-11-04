@@ -46,6 +46,22 @@ Your task is to calculate the total budget required to buy electronics:
     tablet = 15000 tk
     mobile = 20000 tk
 Write a JavaScript function named calculateElectronicsBudget that takes in the number of laptop, tablets, and mobile and returns the total money required.*/
+function calculateElectronicsBudget(laptopQuantity, tabletsQuantity, mobileQuantity){
+    if(typeof laptopQuantity !== 'number' || typeof tabletsQuantity !== 'number' || typeof mobileQuantity !== 'number'){
+        return "Please enter valid quantity as number."
+    }
+    const laptop = 35000 ;
+    const tablet = 15000 ;
+    const mobile = 20000 ;
+    const laptopPrice = laptop * laptopQuantity ;
+    const tabletPrice = tablet * tabletsQuantity ;
+    const mobilePrice = mobile * mobileQuantity;
+    const totalBudget = laptopPrice + tabletPrice + mobilePrice;
+    return totalBudget;
+
+}
+const result = calculateElectronicsBudget(2,4,'amar');
+console.log(result);
 
 /*Task-4:
 You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone.
