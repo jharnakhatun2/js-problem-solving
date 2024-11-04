@@ -14,12 +14,14 @@ function calculateMoney(ticketQuantity) {
 const calMoney = calculateMoney(93);
 console.log(calMoney);
 
+
+
 // Problem-02: Good Name , Bad Name
 function checkName(name) {
-    if(typeof name !== 'string'){
-        return 'invalid ';
-    }
-const lastChar = name[name.length - 1].toLowerCase();
+  if (typeof name !== "string") {
+    return "invalid ";
+  }
+  const lastChar = name[name.length - 1].toLowerCase();
   if (lastChar === "a") {
     console.log("Good Name");
   } else if (lastChar === "y") {
@@ -38,48 +40,75 @@ const lastChar = name[name.length - 1].toLowerCase();
     console.log("Bad Name");
   }
 }
-const result = checkName('Salman');
+const result = checkName("Salman");
 console.log(result);
 
 
 
 // Problem 03 : Virus in my Array
-const input =[1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }] ;
-function deleteInvalids(numbers){
-    if(!Array.isArray(numbers)){
-        return 'Please provide a valid array';
+const input = [1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }];
+function deleteInvalids(numbers) {
+  if (!Array.isArray(numbers)) {
+    return "Please provide a valid array";
+  }
+  let arr = [];
+  for (const number of numbers) {
+    if (typeof number === "number" && Number.isNaN(number) === false) {
+      arr.push(number);
     }
-    let arr = [];
-    for(const number of numbers){
-        if(typeof number === 'number' && Number.isNaN(number) === false){
-            arr.push(number);
-        }
-    }
-    return arr;
+  }
+  return arr;
 }
-const virus = deleteInvalids(["1" , {num:2} , NaN ] );
+const virus = deleteInvalids(["1", { num: 2 }, NaN]);
 console.log(virus);
 
 
 
 // Problem 04 : Make A Great Password
-function password(object){
-   if(!object.siteName || !object.birthYear || !object.siteName){
-    return 'Error: Missing required properties!!!'
-   }
-   if(typeof object.birthYear !== 'number' || object.birthYear.toString().length !== 4){
-    return "Error : birthYear must be a four-digit number"
-   }
-   const siteName = object.siteName.charAt(0).toUpperCase()+ object.siteName.slice(1)
-   const password = siteName + '#' + object.name + '@' + object.birthYear
-   return password;
-
+function password(object) {
+  if (!object.siteName || !object.birthYear || !object.siteName) {
+    return "Error: Missing required properties!!!";
+  }
+  if (
+    typeof object.birthYear !== "number" ||
+    object.birthYear.toString().length !== 4
+  ) {
+    return "Error : birthYear must be a four-digit number";
+  }
+  const siteName =
+    object.siteName.charAt(0).toUpperCase() + object.siteName.slice(1);
+  const password = siteName + "#" + object.name + "@" + object.birthYear;
+  return password;
 }
-const pass = password({ name: "kolimuddin" , birthYear: 1999 , siteName: "google" });
+const pass = password({
+  name: "kolimuddin",
+  birthYear: 1999,
+  siteName: "google",
+});
 //const pass = password({ name: "toky", birthYear: 200, siteName: "Facebook" } );
 console.log(pass);
 
 
 
 
+// Problem 05 : Monthly Savings of a Freelancer
+function monthlySavings(paymentsArray, livingCost) {
+  if (!Array.isArray(paymentsArray) && typeof livingCost !== "number") {
+    return "Invalid input";
+  }
 
+  let allPayments = 0;
+  for (const item of paymentsArray) {
+    let discountItem = item >= 3000 ? item * 0.8 : item;
+    allPayments += discountItem;
+  }
+
+  const savings = allPayments - livingCost;
+  if (savings >= 0) {
+    return savings;
+  } else if (savings < 0) {
+    return "earn more";
+  }
+}
+const savings = monthlySavings([1000, 2000, 2500], 5000);
+console.log(savings);
